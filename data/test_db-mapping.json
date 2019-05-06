@@ -1,0 +1,57 @@
+{
+  "categorize_fields": [
+    "gender",
+    "title"
+  ],
+  "categorize_mapping": [
+    [
+      "gender",
+      {
+        "F": "V2",
+        "M": "V1"
+      }
+    ],
+    [
+      "title",
+      {
+        "Assistant Engineer": "V6",
+        "Engineer": "V3",
+        "Senior Engineer": "V4",
+        "Senior Staff": "V5",
+        "Staff": "V1",
+        "Technique Leader": "V2"
+      }
+    ]
+  ],
+  "comments": "- Keep your mapping private and do NOT share to any ML person / team. \n        - Review and fix fields for your own CSV.\n        - Share only encrypted CSV.\n        - For prediction use same way to encrypt values before to pass it to the ML model.\n        - Fix and use your own dates_offset_seconds, now 1234 days as offset it is just a sample!!! \n          Put your own positive number of days. So all dates will be shifted using that value.",
+  "dates_offset_seconds": 106617600,
+  "fields_as_is": [
+    "emp_id"
+  ],
+  "fields_dates_add_offset": [
+    "birth_date",
+    "salary_end_date",
+    "title_end_date"
+  ],
+  "fields_mapping": {
+    "birth_date": "F3",
+    "emp_id": "F1",
+    "gender": "F6",
+    "salary": "F2",
+    "salary_end_date": "F4",
+    "title": "F7",
+    "title_end_date": "F5"
+  },
+  "normalized_fields": [
+    "salary"
+  ],
+  "normalized_fields_with_avg_std_offsets": [
+    [
+      "salary",
+      [
+        50172.9375,
+        11595.354465629489
+      ]
+    ]
+  ]
+}
