@@ -46,7 +46,7 @@ def covert_date_to_epoch_seconds(src_df, dst_df, data_column_from, data_column_t
     :param add_offset_as_seconds: all dates will be shifted
     """
     data = src_df[data_column_from]
-    epoch_seconds = data.apply(datetime.datetime.timestamp).astype(int)
+    epoch_seconds = data.apply(datetime.datetime.timestamp).astype('int64')
     dst_df[data_column_to] = epoch_seconds + add_offset_as_seconds
 
 
@@ -65,7 +65,7 @@ def categorize(src_df, dst_df, field_names):
         unique_values = list(set(data))
         random.shuffle(unique_values)  # make it unpredictable
         field_mapping = dict(list(zip(list(map(lambda x: str(x), unique_values)),
-                                      list(map(lambda x: f'V{x+1}', range(len(unique_values)))))))
+                                      list(map(lambda x: f'C{x+1}', range(len(unique_values)))))))
         data = data.astype('str')
         data = data.apply(lambda x: field_mapping[x])
         dst_df[field_name] = data
@@ -96,4 +96,18 @@ def convert_dates(date_series):
     utc_tz = tz.gettz('UTC')
     return data.apply(
         lambda dt: datetime.datetime.strptime(dt, '%Y-%m-%d %H:%M:%S').replace(tzinfo=utc_tz))
+
+
+def rename_fields(col_names, datatime_fields):
+    """
+    Rename field names
+    :param datatime_fields: fields with date/time
+    :param col_names: from the data frame
+    :return: renamed column names
+    """
+    # random.shuffle(cols)
+    field_names_mapping = dict(zip(col_names, map(lambda x: f'F{x+1}', range(len(col_names)))))
+    for field_name in datatime_fields:
+        field_names_mapping[field_name] += 'DT'
+    return field_names_mapping
 

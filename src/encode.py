@@ -4,7 +4,7 @@ import json
 import random
 
 from util import normalize, categorize, load_csv_as_is, \
-    covert_date_to_epoch_seconds, convert_dates, save_mapping, save_mapping_as_is
+    covert_date_to_epoch_seconds, convert_dates, save_mapping, save_mapping_as_is, rename_fields
 
 INPUT_CSV_FILE = '../data/test_db-as-is.csv'  # an input CSV file - DO NOT SHARE!!!
 OUTPUT_CSV_FILE = '../data/test_db-encoded.csv'  # a CSV file will be produced - you can share this CSV
@@ -49,11 +49,8 @@ for field_name in mapping['fields_dates_add_offset']:
 
 mapping['categorize_mapping'] = categorize(df1, df2, mapping['categorize_fields'])
 
-cols = list(df2.columns)
-# random.shuffle(cols)
-field_names_mapping = dict(zip(cols, map(lambda x: f'F{x+1}', range(len(cols)))))
-df2.rename(columns=field_names_mapping, inplace=True)
-mapping['fields_mapping'] = field_names_mapping
+mapping['fields_mapping'] = rename_fields(df2.columns, mapping['fields_dates_add_offset'])
+df2.rename(columns=mapping['fields_mapping'], inplace=True)
 
 print(f'saving "{OUTPUT_CSV_FILE}"...')
 df2.to_csv(OUTPUT_CSV_FILE, index=False)

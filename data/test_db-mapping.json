@@ -7,19 +7,19 @@
     [
       "gender",
       {
-        "F": "V2",
-        "M": "V1"
+        "F": "C1",
+        "M": "C2"
       }
     ],
     [
       "title",
       {
-        "Assistant Engineer": "V6",
-        "Engineer": "V3",
-        "Senior Engineer": "V4",
-        "Senior Staff": "V5",
-        "Staff": "V1",
-        "Technique Leader": "V2"
+        "Assistant Engineer": "C2",
+        "Engineer": "C5",
+        "Senior Engineer": "C1",
+        "Senior Staff": "C6",
+        "Staff": "C3",
+        "Technique Leader": "C4"
       }
     ]
   ],
@@ -34,13 +34,13 @@
     "title_end_date"
   ],
   "fields_mapping": {
-    "birth_date": "F3",
+    "birth_date": "F3DT",
     "emp_id": "F1",
     "gender": "F6",
     "salary": "F2",
-    "salary_end_date": "F4",
+    "salary_end_date": "F4DT",
     "title": "F7",
-    "title_end_date": "F5"
+    "title_end_date": "F5DT"
   },
   "normalized_fields": [
     "salary"
