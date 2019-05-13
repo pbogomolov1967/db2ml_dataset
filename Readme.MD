@@ -7,7 +7,7 @@ This project guides you how to:
 
 ## Getting Started
 
-1) Review a sample SQL at 'data/test_db-encoded.csv' and make your own to export as much as possible fields. 
+1) Review a sample SQL at 'data/test_db-export.sql' and make your own to export as much as possible fields. 
 Do not worry - all sensitive data will be encoded (obfuscated) in a final CSV. Finally run your own SQL and 
 produce a raw CSV that will be encoded. 
 
