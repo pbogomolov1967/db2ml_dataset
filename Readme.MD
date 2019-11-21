@@ -36,6 +36,12 @@ mapping = {
 4) Share encoded CSV but DO NOT SHARE raw CSV and mapping files. Encoded CSV keeps the structure of the data 
 but does not reveal its values.      
 
+5) Train an ML model on encoded dataset and predict something. Send predicted results (also encoded) back who holds the mapping JSON / Pickle.
+
+6) Decode back predicted values to normal values using the maping JSON or pickle file.
+
+Have fun! ML team and production data are isolated!
+
 ### Prerequisites
 
 You need to use Python 3.7 and later version. 
