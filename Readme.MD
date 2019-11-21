@@ -42,6 +42,8 @@ but does not reveal its values.
 
 Have fun! ML team and production data are isolated!
 
+PS if you think this approach is not safe please try to decode encoded CSV in the data folder but do not use mapping JSON / pickle. If you do it please send it to me and I will remove this project as unsafe right away! 
+
 ### Prerequisites
 
 You need to use Python 3.7 and later version. 
