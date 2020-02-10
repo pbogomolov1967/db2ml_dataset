@@ -44,6 +44,9 @@ Have fun! ML team and production data are isolated!
 
 PS if you think this approach is not safe please try to decode encoded CSV in the data folder but do not use mapping JSON / pickle. If you do it please send it to me and I will remove this project as unsafe right away! 
 
+### Warning!
+PSS I was wrong that it is impossible to reveal some kind of information. It is possible since the structure of the data, relations between features and in a feature are preserved. For example, it is possible to decode the mean and std of a salary column thus it is possible to decode salaries. Of course, it is impossible to see names, emails, phones, SSN and any other personal information but again it is possible to decode continuous variables and dates in the dataset. So, ideally, the Federative learning is the best!
+
 ### Prerequisites
 
 You need to use Python 3.7 and later version. 
