@@ -1,4 +1,4 @@
-# DB to ML DataSet
+# Export sensetice data and obfuscate it
 
 > It is possible to export the sensitive data and obfuscate (encode) it.
 
