@@ -1,5 +1,7 @@
 # DB to ML DataSet
 
+> It is possible to export the sensitive data and obfuscate (encode) it.
+
 This project guides you how to:
 - export data from DB to a big raw CSV,
 - how to encode (obfuscate) CSV,
