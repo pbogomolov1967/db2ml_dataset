@@ -1,4 +1,4 @@
-# Export sensetice data and obfuscate it
+# Export sensitive data and obfuscate it
 
 > It is possible to export the sensitive data and obfuscate (encode) it.
 
